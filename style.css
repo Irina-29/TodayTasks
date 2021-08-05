@@ -1,0 +1,9 @@
+.container-fluid {
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    background-color: turquoise;
+}
+
