@@ -1,13 +1,20 @@
 .container {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
+
     .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        padding: 40px 20px 40px 20px !important;
     }
+
     h2 {
         text-align: center;
     }
