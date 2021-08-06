@@ -6,13 +6,13 @@
 }
 
 @media (max-width: 768px) {
-    
+
     .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 40px 20px 40px 20px !important;
+        padding: 40px 25px 40px 25px !important;
     }
 
     h2 {
