@@ -1,9 +1,14 @@
-.container-fluid {
-    height: 100vh;
+.container {
+    min-height: 100vh;
 }
 
-.header {
-    text-align: center;
-    background-color: turquoise;
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h2 {
+        text-align: center;
+    }
 }
-
