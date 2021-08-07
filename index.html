@@ -10,18 +10,40 @@
 </head>
 <body>
     <main>
-        <div class="container py-4">
-            <header class="pb-3 mb-4 border-bottom">
-                <h1 class="display-5 text-center">TODAY TASKS</h1>
+        <div class="container-fluid py-4">
+            <header class="pb-3 mb-4 border-bottom border-white">
+                <h1 class="display-5 text-center text-white">TODAY TASKS</h1>
             </header>
             <div class="row justify-content-center">
                 <div class="col-10 col-md-12">
                     <div class="p-5 mb-5 bg-light rounded-3 content">
                         <h2 class="mb-3 fs-2 fw-bold">Time to hustle!</h2>
                         <div class="tasks-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, temporibus.
+                            <ul class="list-group list-group-flush fs-4">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="task">
+                                        <input type="checkbox" aria-label="checkbox">
+                                        do homework
+                                    </div>                                    
+                                    <span class="badge rounded-pill bg-danger fs-6">must</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="task">
+                                        <input type="checkbox" aria-label="checkbox">
+                                        go shopping
+                                    </div>                  
+                                    <span class="badge rounded-pill bg-warning fs-6">should</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="task">
+                                        <input type="checkbox" aria-label="checkbox">
+                                        read that book
+                                    </div>    
+                                    <span class="badge rounded-pill bg-info fs-6">could</span>
+                                </li>
+                              </ul>
                         </div>
-                        <button type="button" class="px-4 mt-3 btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#add-task-modal">Add task</button>
+                        <button type="button" class="px-4 mt-3 btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#add-task-modal">Add task</button>
                     </div>
                 </div>
                 <div class="modal fade" id="add-task-modal" tabindex="-1" aria-labelledby="add-task-modal-label" aria-hidden="true">
@@ -45,7 +67,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Add</button>
+                            <button type="button" class="btn btn-dark px-4">Add</button>
                         </div>
                       </div>
                     </div>
@@ -53,11 +75,16 @@
                 <div class="col-10 col-md-12">
                     <div class="p-5 text-white bg-dark rounded-3 content">
                       <h2 class="mb-3 fs-3">Completed</h2>
-                      <div class="completed-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, voluptates.</div>
+                      <div class="completed-content">
+                        <ul class="list-completed fs-5">
+                            <li class="text-decoration-line-through">write essay</li>
+                            <li class="text-decoration-line-through">exercise</li>                          
+                          </ul>
+                      </div>
                     </div>
                 </div>
             </div>
-            <footer class="pt-3 mt-4 border-top"></footer>
+            <footer class="pt-3 mt-4 border-top border-white"></footer>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
