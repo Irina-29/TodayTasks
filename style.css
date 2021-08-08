@@ -24,6 +24,10 @@ ul {
     margin: 0;
 }
 
+.form-check-input:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
 
     .container-fluid {
@@ -35,7 +39,7 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 40px 25px !important;
+        padding: 40px 20px !important;
     }
 
     h2 {
