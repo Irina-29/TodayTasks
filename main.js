@@ -38,9 +38,21 @@ function addTask() {
 
     var ul = document.getElementById("tasks-list");
     var li = document.createElement('li');
-    li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center")
+    li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+    var div = document.createElement('div');
+    div.classList.add("form-check");
 
-    li.appendChild(document.createTextNode(task[len].name));
+    var input = document.createElement('input');
+    input.setAttribute("type", "checkbox");
+    input.classList.add("form-check-input", "rounded-circle", "border-2");
+
+    // inside div:
+    // <input class="form-check-input rounded-circle border-2" type="checkbox" value="" id="check-task-1">
+    // <label class="form-check-label" for="check-task-1"> </label>
+
+    //input.appendChild(document.createElement(task[len].name));
+    //div.appendChild(input);
+    li.appendChild(div);
     ul.appendChild(li);
 
     console.log(task[len]);
