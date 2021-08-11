@@ -1,30 +1,8 @@
-// cand toate taskurile sunt completate:
-//     variabila care numara cate taskuri sunt in lista de abia dupa ce este inserat 1 task; 
-//     cand variabila == 0 (nu mai sunt taskuri in lista):
-//          -> taskurile din lista de completed sunt sterse 
-//          -> mesaj congratulations
-
-// sort by priority: option value devine numar de la 1 la 3 (cu switch statement) -> sortare
-
-
-// method - using class for tasks
-// class task {
-//     constructor(name, priority) {
-//         this.name = name;
-//         this.priority = priority;
-//     }
-// }
-
-// function addTask() {
-//     var taskName = document.getElementById("floatingTextarea").value;
-//     var taskPriority = document.getElementById("priorityOption").value;
-//     var newTask = new task(taskName, taskPriority);
-//     console.log(newTask);
-// }
-
-
-// method - using array of objects for tasks
 var task = [], len = 0, checkTask = 0;
+
+//  <span class="badge rounded-pill bg-danger fs-6">must</span>
+//  <span class="badge rounded-pill bg-warning fs-6">should</span>
+//  <span class="badge rounded-pill bg-info fs-6">could</span>
 
 function addTask() {
 
@@ -38,9 +16,13 @@ function addTask() {
         priority: taskPriority
     });
 
+    // checkPriority(taskPriority);
+
     var ul = document.getElementById("tasks-list");
+
     var li = document.createElement('li');
     li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+
     var div = document.createElement('div');
     div.classList.add("form-check");
 
@@ -53,6 +35,7 @@ function addTask() {
     label.htmlFor = checkTask;
     label.classList.add("form-check-label");
 
+    // li.appendChild(badge);
     label.appendChild(document.createTextNode(task[len].name));
     div.appendChild(label);
     div.appendChild(checkbox);
@@ -62,3 +45,11 @@ function addTask() {
     console.log(task[len]);
     len++;
 }
+
+// function checkPriority(taskPriority) {
+//     if (taskPriority == "must") {
+//         var badge = document.createElement('span');
+//         badge.classList.add("badge", "rounded-pill", "bg-danger", "fs-6");
+//         badge.appendChild(document.createTextNode("must"));
+//     }
+// }
