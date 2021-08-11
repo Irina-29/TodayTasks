@@ -4,6 +4,8 @@
 //          -> taskurile din lista de completed sunt sterse 
 //          -> mesaj congratulations
 
+// sort by priority: option value devine numar de la 1 la 3 (cu switch statement) -> sortare
+
 var tasks = [];
 
 var len = 0;
