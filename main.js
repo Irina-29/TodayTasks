@@ -24,9 +24,11 @@
 
 
 // method - using array of objects for tasks
-var task = [], len = 0;
+var task = [], len = 0, checkTask = 0;
 
 function addTask() {
+
+    checkTask++;
 
     var taskName = document.getElementById("floatingTextarea").value;
     var taskPriority = document.getElementById("priorityOption").value;
@@ -42,16 +44,18 @@ function addTask() {
     var div = document.createElement('div');
     div.classList.add("form-check");
 
-    var input = document.createElement('input');
-    input.setAttribute("type", "checkbox");
-    input.classList.add("form-check-input", "rounded-circle", "border-2");
+    var checkbox = document.createElement('input');
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("id", checkTask);
+    checkbox.classList.add("form-check-input", "rounded-circle", "border-2");
 
-    // inside div:
-    // <input class="form-check-input rounded-circle border-2" type="checkbox" value="" id="check-task-1">
-    // <label class="form-check-label" for="check-task-1"> </label>
+    var label = document.createElement('label');
+    label.htmlFor = checkTask;
+    label.classList.add("form-check-label");
 
-    //input.appendChild(document.createElement(task[len].name));
-    //div.appendChild(input);
+    label.appendChild(document.createTextNode(task[len].name));
+    div.appendChild(label);
+    div.appendChild(checkbox);
     li.appendChild(div);
     ul.appendChild(li);
 
