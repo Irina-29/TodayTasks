@@ -1,9 +1,5 @@
 var task = [], len = 0, checkTask = 0;
 
-//  <span class="badge rounded-pill bg-danger fs-6">must</span>
-//  <span class="badge rounded-pill bg-warning fs-6">should</span>
-//  <span class="badge rounded-pill bg-info fs-6">could</span>
-
 function addTask() {
 
     checkTask++;
@@ -16,7 +12,7 @@ function addTask() {
         priority: taskPriority
     });
 
-    // checkPriority(taskPriority);
+    var badge = checkPriority(taskPriority);
 
     var ul = document.getElementById("tasks-list");
 
@@ -35,21 +31,34 @@ function addTask() {
     label.htmlFor = checkTask;
     label.classList.add("form-check-label");
 
-    // li.appendChild(badge);
-    label.appendChild(document.createTextNode(task[len].name));
-    div.appendChild(label);
-    div.appendChild(checkbox);
-    li.appendChild(div);
     ul.appendChild(li);
+    li.appendChild(div);
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    label.appendChild(document.createTextNode(task[len].name));
+    li.appendChild(badge);
 
     console.log(task[len]);
     len++;
 }
 
-// function checkPriority(taskPriority) {
-//     if (taskPriority == "must") {
-//         var badge = document.createElement('span');
-//         badge.classList.add("badge", "rounded-pill", "bg-danger", "fs-6");
-//         badge.appendChild(document.createTextNode("must"));
-//     }
-// }
+function checkPriority(taskPriority) {
+    if (taskPriority == "must") {
+        var badge = document.createElement('span');
+        badge.classList.add("badge", "rounded-pill", "bg-danger", "fs-6");
+        badge.appendChild(document.createTextNode("must"));
+        return badge;
+    }
+    if (taskPriority == "should") {
+        var badge = document.createElement('span');
+        badge.classList.add("badge", "rounded-pill", "bg-warning", "fs-6");
+        badge.appendChild(document.createTextNode("should"));
+        return badge;
+    }
+    if (taskPriority == "could") {
+        var badge = document.createElement('span');
+        badge.classList.add("badge", "rounded-pill", "bg-info", "fs-6");
+        badge.appendChild(document.createTextNode("could"));
+        return badge;
+    }
+}
