@@ -70,13 +70,24 @@ function completeTask(element, task) {
     var ul = document.getElementById("completed-list");
 
     var li = document.createElement('li');
-    li.classList.add("text-decoration-line-through");
+    li.classList.add("completed-item", "text-decoration-line-through");
 
     ul.appendChild(li);
     li.appendChild(document.createTextNode(task));
 
     element.remove();
+    len--;
+
+    checkLength();
 }
 
-// delete tasks from completed once the tasks list is empty (querySelectAll)
-// display congratulations message modal
+function checkLength() {
+    if (len == 0) {
+        $("#message-modal").modal('show');
+        $('#message-modal').on('hidden.bs.modal', function () {
+            location.reload();
+        })
+    }
+}
+
+//error when priority value is null
