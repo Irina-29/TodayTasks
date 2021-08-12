@@ -85,7 +85,10 @@ function checkLength() {
     if (len == 0) {
         $('#message-modal').modal('show');
         $('#message-modal').on('shown.bs.modal', function () {
-            //startConfetti();
+            confetti({
+                particleCount: 200,
+                spread: 200
+              });
         })
         $('#message-modal').on('hidden.bs.modal', function () {
             location.reload();
