@@ -86,8 +86,8 @@ function checkLength() {
         $('#message-modal').modal('show');
         $('#message-modal').on('shown.bs.modal', function () {
             confetti({
-                particleCount: 200,
-                spread: 200
+                particleCount: 400,
+                spread: 400
               });
         })
         $('#message-modal').on('hidden.bs.modal', function () {
