@@ -36,7 +36,7 @@ function addTask() {
     li.appendChild(div);
     div.appendChild(checkbox);
     div.appendChild(label);
-    label.appendChild(document.createTextNode(task[len].name));
+    label.appendChild(document.createTextNode(taskName)); 
     li.appendChild(badge);
 
     checkbox.addEventListener("click", function() {completeTask(li, taskName)});
@@ -96,4 +96,10 @@ function checkLength() {
     }
 }
 
-//error when priority value is null
+// UPDATES:
+// make textarea and select required
+// refresh textarea and select after add task
+// tick checkbox on hover
+
+// DEBUG:
+// task array is useless
