@@ -17,6 +17,7 @@ function addTask() {
     var ul = document.getElementById("tasks-list");
 
     var li = document.createElement('li');
+    li.setAttribute("id", "item-list");
     li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
 
     var div = document.createElement('div');
@@ -38,7 +39,8 @@ function addTask() {
     label.appendChild(document.createTextNode(task[len].name));
     li.appendChild(badge);
 
-    console.log(task[len]);
+    checkbox.addEventListener("click", function() {completeTask(li, taskName)});
+
     len++;
 }
 
@@ -61,4 +63,17 @@ function checkPriority(taskPriority) {
         badge.appendChild(document.createTextNode("could"));
         return badge;
     }
+}
+
+function completeTask(element, task) {
+    
+    var ul = document.getElementById("completed-list");
+
+    var li = document.createElement('li');
+    li.classList.add("text-decoration-line-through");
+
+    ul.appendChild(li);
+    li.appendChild(document.createTextNode(task));
+
+    element.remove();
 }
