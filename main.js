@@ -77,3 +77,6 @@ function completeTask(element, task) {
 
     element.remove();
 }
+
+// delete tasks from completed once the tasks list is empty (querySelectAll)
+// display congratulations message modal
