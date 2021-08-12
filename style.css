@@ -50,4 +50,8 @@ ul {
     .completed-content {
         width: 90%;
     }
+
+    .message-modal-body {
+        padding: 10% 5% !important;
+    }
 }
