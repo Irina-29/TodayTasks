@@ -29,6 +29,10 @@ ul {
     background-color:rgba(0,0,0,.2);
 }
 
+.form-check-label:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
 
     .container-fluid {
