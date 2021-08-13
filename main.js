@@ -1,8 +1,5 @@
 var len = 0, checkTask = 0;
 
-// document.getElementById("floatingTextarea").required = true;
-// document.getElementById("priorityOption").required = true;
-
 $('#add-task-modal').on('shown.bs.modal', function () {
     $('#floatingTextarea').focus();
 })
@@ -111,7 +108,3 @@ function checkLength() {
         })
     }
 }
-
-// UPDATES:
-// make textarea and select required
-// tick checkbox on hover
