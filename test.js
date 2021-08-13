@@ -1,14 +1,29 @@
+// <button type="button" class="btn btn-dark px-4" onclick="checkRequired()" data-bs-dismiss="modal">Add</button>
+
 var len = 0, checkTask = 0;
 
-function addTask() {
-
-    checkTask++;
+function checkRequired() {
 
     var taskName = document.getElementById("floatingTextarea").value;
     var taskPriority = document.getElementById("priorityOption").value;
 
-    document.getElementById("floatingTextarea").value = '';
-    document.getElementById("priorityOption").value = 'choose';
+    if(taskName == 0) {
+        alert("empty");
+    }
+    if(taskPriority == 0) {
+        alert("empty");
+    }
+    else if(taskName != 0 && taskPriority != 0) {
+        addTask(taskName, taskPriority);
+    }
+}
+
+function addTask(taskName, taskPriority) {
+
+    //var taskName = document.getElementById("floatingTextarea").value;
+    //var taskPriority = document.getElementById("priorityOption").value;
+    
+    checkTask++;
 
     var badge = checkPriority(taskPriority);
 
@@ -40,6 +55,9 @@ function addTask() {
     checkbox.addEventListener("click", function() {completeTask(li, taskName)});
 
     len++;
+
+    document.getElementById("floatingTextarea").value = '';
+    document.getElementById("priorityOption").value = 'choose';
 }
 
 function checkPriority(taskPriority) {
@@ -93,7 +111,3 @@ function checkLength() {
         })
     }
 }
-
-// UPDATES:
-// make textarea and select required
-// tick checkbox on hover
