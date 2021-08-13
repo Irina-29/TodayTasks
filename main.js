@@ -37,6 +37,9 @@ function addTask() {
     checkbox.addEventListener("click", function() {completeTask(li, taskName)});
 
     len++;
+
+    document.getElementById("floatingTextarea").value = '';
+    document.getElementById("priorityOption").value = 'choose';
 }
 
 function checkPriority(taskPriority) {
@@ -93,5 +96,4 @@ function checkLength() {
 
 // UPDATES:
 // make textarea and select required
-// refresh textarea and select after add task
 // tick checkbox on hover
