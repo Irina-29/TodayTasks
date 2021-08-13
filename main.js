@@ -23,7 +23,7 @@ function addTask() {
     var taskPriority = document.getElementById("priorityOption").value;
 
     document.getElementById("floatingTextarea").value = '';
-    document.getElementById("priorityOption").value = 'choose';
+    document.getElementById("priorityOption").value = '';
 
     var badge = checkPriority(taskPriority);
 
