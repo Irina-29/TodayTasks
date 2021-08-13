@@ -22,7 +22,7 @@
                         <div class="tasks-content">
                             <ul class="list-group list-group-flush fs-5" id="tasks-list"></ul>
                         </div>
-                        <button type="button" class="px-4 mt-3 btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#add-task-modal">Add task</button>
+                        <button type="button" class="px-4 mt-3 btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#add-task-modal" id="add-task-button">Add task</button>
                     </div>
                 </div>
                 <div class="modal fade" id="add-task-modal" tabindex="-1" aria-labelledby="add-task-modal-label" aria-hidden="true">
@@ -34,10 +34,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3 form-floating">
-                                <textarea class="form-control" placeholder="Enter task here" name="floatingTextarea" id="floatingTextarea" required></textarea>
+                                <textarea class="form-control" placeholder="Enter task here" name="floatingTextarea" id="floatingTextarea" onkeypress="changeFocusTextarea(event, this)"></textarea>
                                 <label for="floatingTextarea">Enter task here</label>
                             </div>
-                            <select class="form-select" aria-label="priority-select" id="priorityOption">
+                            <select class="form-select" aria-label="priority-select" id="priorityOption" onchange="changeFocusSelect()">
                                 <option value="choose" selected disabled>Choose priority</option>
                                 <option value="must">Must</option>
                                 <option value="should">Should</option>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-dark px-4" onclick="addTask()" data-bs-dismiss="modal">Add</button>
+                            <button type="button" class="btn btn-dark px-4" onclick="addTask()" data-bs-dismiss="modal" id="add-button">Add</button>
                         </div>
                       </div>
                     </div>

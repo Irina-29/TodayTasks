@@ -1,5 +1,23 @@
 var len = 0, checkTask = 0;
 
+// document.getElementById("floatingTextarea").required = true;
+// document.getElementById("priorityOption").required = true;
+
+$('#add-task-modal').on('shown.bs.modal', function () {
+    $('#floatingTextarea').focus();
+})
+
+function changeFocusTextarea(e) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 13) {
+        document.getElementById("priorityOption").focus();
+    }
+}
+
+function changeFocusSelect() {
+    document.getElementById("add-button").focus();
+}
+
 function addTask() {
 
     checkTask++;
