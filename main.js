@@ -1,4 +1,4 @@
-var task = [], len = 0, checkTask = 0;
+var len = 0, checkTask = 0;
 
 function addTask() {
 
@@ -6,11 +6,6 @@ function addTask() {
 
     var taskName = document.getElementById("floatingTextarea").value;
     var taskPriority = document.getElementById("priorityOption").value;
-
-    task.push({
-        name: taskName,
-        priority: taskPriority
-    });
 
     var badge = checkPriority(taskPriority);
 
@@ -65,7 +60,7 @@ function checkPriority(taskPriority) {
     }
 }
 
-function completeTask(element, task) {
+function completeTask(element, taskText) {
     
     var ul = document.getElementById("completed-list");
 
@@ -73,7 +68,7 @@ function completeTask(element, task) {
     li.classList.add("completed-item", "text-decoration-line-through");
 
     ul.appendChild(li);
-    li.appendChild(document.createTextNode(task));
+    li.appendChild(document.createTextNode(taskText));
 
     element.remove();
     len--;
@@ -100,6 +95,3 @@ function checkLength() {
 // make textarea and select required
 // refresh textarea and select after add task
 // tick checkbox on hover
-
-// DEBUG:
-// task array is useless
