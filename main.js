@@ -55,6 +55,8 @@ function addTask() {
     checkbox.addEventListener("click", function() {completeTask(li, taskName)});
 
     len++;
+
+    $('#add-task-modal').modal('hide');
 }
 
 function checkPriority(taskPriority) {

@@ -33,7 +33,7 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- <form id="task-form" class="needs-validation" novalidate> -->
+                            <form id="task-form" class="needs-validation" novalidate action="#" onsubmit="addTask()">
                                 <div class="mb-3 form-floating">
                                     <textarea class="form-control" placeholder="Enter task here" name="floatingTextarea" id="floatingTextarea" onkeypress="changeFocusTextarea(event, this)" required></textarea>
                                     <label for="floatingTextarea">Enter task here</label>
@@ -46,12 +46,12 @@
                                         <option value="could">Could</option>
                                     </select>
                                 </div>
-                            <!-- </form> -->
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-dark px-4" onclick="addTask()" data-bs-dismiss="modal" id="add-button">Add</button>
-                            <!-- <button type="submit" form="task-form" class="btn btn-dark px-4" id="add-button">Add</button> -->
+                            <!-- <button type="button" class="btn btn-dark px-4" onclick="addTask()" data-bs-dismiss="modal" id="add-button">Add</button> -->
+                            <button type="submit" form="task-form" class="btn btn-dark px-4" id="add-button">Add</button>
                         </div>
                       </div>
                     </div>
