@@ -15,15 +15,13 @@ function changeFocusSelect() {
     document.getElementById("add-button").focus();
 }
 
-$(document).ready(function() {
-    $('#add-button').on('click', function(event) {
-      var isvalidate = $("#task-form")[0].checkValidity();
-      if (isvalidate) {
-        event.preventDefault();
-        addTask();
-      }
-    });
-  });
+$('#add-button').on('click', function(event) {
+    var isvalidate = $("#task-form")[0].checkValidity();
+    if (isvalidate) {
+    event.preventDefault();
+    addTask();
+    }
+})
 
 function addTask() {
 
