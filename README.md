@@ -1,2 +1,2 @@
 # TodayTasks
-TodayTasks is a to-do list website.
+TodayTasks is a minimalist to-do list website.
